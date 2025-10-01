@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online calculators: Mortgage Calculator, BMI Calculator, Income Tax Calculator, Tip Calculator, and Currency Converter. Accurate financial planning tools for home loans, health tracking, tax estimation, bill splitting, and currency conversion.">
+    <meta name="keywords" content="mortgage calculator, bmi calculator, income tax calculator, tip calculator, currency converter, free online tools, financial calculator, home loan calculator, body mass index calculator, tax estimator, tip calculator for restaurants, currency exchange calculator, loan payment calculator, health calculator, finance tools, investment calculator, retirement planning">
+    <title>Free Online Calculators: Mortgage, BMI, Tax, Tip & Currency | AmazingTools4 Best Mortgage Payment Calculator
+Accurate BMI Tracker
+Free US Income Tax Estimator
+Restaurant Tip Splitter
+Live Foreign Currency Exchange
+Online **Financial Wellness** Calculators
+**Personal Finance** Tools
+**Home Equity** Calculator
+**Health Metrics** Analyzer
+Tax Bracket Estimator
+Monthly Loan Payment
+Body Mass Index Check</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- =============================================== -->
+    <!--                   CSS STYLES                    -->
+    <!-- =============================================== -->
+    <style>
+        /* General Body Styles */
+        :root {
+            --primary-blue: #007BFF;
+            --dark-bg: #0a0a1a;
+            --light-bg: #1a1a2e;
+            --text-color: #e0e0e0;
+            --header-font: 'Orbitron', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+            
+            /* Light theme variables */
+            --light-primary-blue: #0056b3;
+            --light-dark-bg: #f5f5f5;
+            --light-light-bg: #ffffff;
+            --light-text-color: #333333;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.light-theme {
+            background-color: var(--light-dark-bg);
+            color: var(--light-text-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--light-bg);
+            border-bottom: 2px solid var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .light-theme header {
+            background: var(--light-light-bg);
+            border-bottom: 2px solid var(--light-primary-blue);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--header-font);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .light-theme .logo {
+            color: #333;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        .light-theme .logo span {
+            color: var(--light-primary-blue);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .light-theme .nav-menu a {
+            color: var(--light-text-color);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+
+        .light-theme .nav-menu a:hover {
+            color: var(--light-primary-blue);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--primary-blue);
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .light-theme .theme-toggle {
+            border: 1px solid var(--light-primary-blue);
+            color: var(--light-text-color);
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary-blue);
+            color: #fff;
+        }
+
+        .light-theme .theme-toggle:hover {
+            background: var(--light-primary-blue);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-family: var(--header-font);
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #fff;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .light-theme .section-title {
+            color: #333;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tool-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid transparent;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            animation: fadeInUp 0.5s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        .light-theme .tool-card {
+            background: var(--light-light-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-blue);
+        }
+
+        .light-theme .tool-card:hover {
+            border-color: var(--light-primary-blue);
+        }
+
+        .tool-icon {
+            font-size: 4rem;
+            line-height: 1;
+            animation: bounce 2s infinite;
+        }
+
+        .tool-title {
+            font-family: var(--header-font);
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #fff;
+        }
+
+        .light-theme .tool-title {
+            color: #333;
+        }
+
+        .tool-info {
+            font-size: 0.95rem;
+            min-height: 80px;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: var(--dark-bg);
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: var(--body-font);
+            box-sizing: border-box; /* Important for padding */
+        }
+
+        .light-theme input, .light-theme select {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+
+        /* Button Styles */
+        .calculate-btn, #visitMoreBtn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-blue);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .light-theme .calculate-btn, .light-theme #visitMoreBtn {
+            background: var(--light-primary-blue);
+        }
+
+        .calculate-btn:hover, #visitMoreBtn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .light-theme .calculate-btn:hover, .light-theme #visitMoreBtn:hover {
+            background: #004494;
+        }
+
+        .result-text {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            min-height: 30px;
+        }
+
+        .light-theme .result-text {
+            color: var(--light-primary-blue);
+        }
+
+        /* News Section */
+        #news {
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .news-container {
+            position: relative;
+            height: 100%;
+        }
+
+        .news-group {
+            position: absolute;
+            width: 100%;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 15px;
+            border: 1px solid var(--primary-blue);
+            transition: transform 0.8s ease, opacity 0.8s ease;
+        }
+
+        .light-theme .news-group {
+            background: var(--light-light-bg);
+            border: 1px solid var(--light-primary-blue);
+        }
+
+        .news-group.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .news-group.inactive {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        .news-group.scrolling-up {
+            transform: translateY(-100%);
+        }
+
+        .news-group.scrolling-down {
+            transform: translateY(100%);
+        }
+
+        .news-time {
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            text-align: right;
+        }
+
+        .light-theme .news-time {
+            color: var(--light-primary-blue);
+        }
+
+        .news-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .news-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .light-theme .news-avatar {
+            border: 2px solid var(--light-primary-blue);
+        }
+
+        .news-text {
+            flex: 1;
+        }
+
+        .news-account {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .light-theme .news-account {
+            color: var(--light-primary-blue);
+        }
+
+        /* Reviews Section */
+        #reviews {
+            margin-top: 60px;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            animation: fadeInUp 0.5s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        .light-theme .review-card {
+            background: var(--light-light-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-card:nth-of-type(1) { animation-delay: 0.6s; }
+        .review-card:nth-of-type(2) { animation-delay: 0.7s; }
+
+        .review-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-blue);
+        }
+
+        .light-theme .review-card img {
+            border: 3px solid var(--light-primary-blue);
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        #faq {
+            margin-top: 60px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--light-bg);
+        }
+
+        .light-theme .faq-item {
+            background: var(--light-light-bg);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: var(--primary-blue);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .light-theme .faq-question {
+            background: var(--light-primary-blue);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--light-bg);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid var(--primary-blue);
+        }
+
+        .light-theme footer {
+            background: var(--light-light-bg);
+            border-top: 2px solid var(--light-primary-blue);
+        }
+
+        footer #visitMoreBtn {
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        /* Animation Delays for cards */
+        .tool-card:nth-child(1) { animation-delay: 0.1s; }
+        .tool-card:nth-child(2) { animation-delay: 0.2s; }
+        .tool-card:nth-child(3) { animation-delay: 0.3s; }
+        .tool-card:nth-child(4) { animation-delay: 0.4s; }
+        .tool-card:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =============================================== -->
+    <!--                   HTML CONTENT                  -->
+    <!-- =============================================== -->
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <div class="logo">Amazing<span>Tools4</span></div>
+            <ul class="nav-menu">
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero">
+          
+          
+          
+          
+          <script type="text/javascript">
+	atOptions = {
+		'key' : '150eb2286080c19824f8cae440e7be27',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/150eb2286080c19824f8cae440e7be27/invoke.js"></script>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <h1 class="section-title">Free & Powerful Online Calculators</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem;">
+                Our collection of free online calculators helps you make informed financial decisions, track your health, and simplify everyday calculations. From mortgage planning to currency conversion, we provide accurate tools for all your needs.
+            </p>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools">
+            <h2 class="section-title">Our Calculator Collection</h2>
+            <div class="tools-grid">
+
+                <!-- 🏠 Mortgage Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">🏠</div>
+                    <h3 class="tool-title">Mortgage Calculator</h3>
+                    <p class="tool-info">Plan your home loan with our precise mortgage calculator. Find out your monthly payments, interest costs, and amortization schedule in seconds.</p>
+                    <div class="form-group">
+                        <input type="number" id="loanAmount" placeholder="Loan Amount ($)">
+                        <input type="number" id="interestRate" placeholder="Interest Rate (%)">
+                        <input type="number" id="loanTerm" placeholder="Loan Term (Years)">
+                    </div>
+                    <button class="calculate-btn" data-tool="mortgage">Calculate</button>
+                    <p id="mortgageResult" class="result-text"></p>
+                </div>
+
+                <!-- ⚖️ BMI Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">⚖️</div>
+                    <h3 class="tool-title">BMI Calculator</h3>
+                    <p class="tool-info">Check your Body Mass Index (BMI) to understand your health and fitness level. A simple tool for a healthier you with weight category classification.</p>
+                    <div class="form-group">
+                        <input type="number" id="weight" placeholder="Weight (kg)">
+                        <input type="number" id="height" placeholder="Height (cm)">
+                    </div>
+                    <button class="calculate-btn" data-tool="bmi">Calculate</button>
+                    <p id="bmiResult" class="result-text"></p>
+                </div>
+
+                <!-- 💵 Income Tax Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">💵</div>
+                    <h3 class="tool-title">Income Tax Calculator</h3>
+                    <p class="tool-info">Estimate your annual income tax based on standard deductions. A simplified calculator to help you manage your finances better. (Note: For estimation only).</p>
+                    <div class="form-group">
+                        <input type="number" id="income" placeholder="Your Annual Income ($)">
+                    </div>
+                    <button class="calculate-btn" data-tool="tax">Calculate</button>
+                    <p id="taxResult" class="result-text"></p>
+                </div>
+
+                <!-- 💰 Tip Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">💰</div>
+                    <h3 class="tool-title">Tip Calculator</h3>
+                    <p class="tool-info">Calculate the right tip amount for any service, anywhere. Split the bill among friends with ease and never overpay or underpay again.</p>
+                    <div class="form-group">
+                        <input type="number" id="billAmount" placeholder="Bill Amount ($)">
+                        <input type="number" id="tipPercentage" placeholder="Tip Percentage (%)">
+                    </div>
+                    <button class="calculate-btn" data-tool="tip">Calculate</button>
+                    <p id="tipResult" class="result-text"></p>
+                </div>
+
+                <!-- 💱 Currency Converter -->
+                <div class="tool-card">
+                    <div class="tool-icon">💱</div>
+                    <h3 class="tool-title">Currency Converter</h3>
+                    <p class="tool-info">Convert amounts between different currencies with up-to-date exchange rates. Perfect for travelers, international shoppers, and forex traders.</p>
+                    <div class="form-group">
+                        <input type="number" id="amountToConvert" placeholder="Amount">
+                        <select id="fromCurrency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="PKR">PKR</option>
+                        </select>
+                        <select id="toCurrency">
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="PKR">PKR</option>
+                        </select>
+                    </div>
+                    <button class="calculate-btn" data-tool="currency">Convert</button>
+                    <p id="currencyResult" class="result-text"></p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+              
+   
+              
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '150eb2286080c19824f8cae440e7be27',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/150eb2286080c19824f8cae440e7be27/invoke.js"></script>          
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                  
+<script>
+  function xorEncryptDecrypt(input, key) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      result += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+  }
+  function generateUniqueToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }
+  function openModalWithLink(link) {
+    document.getElementById('modalIframe').src = link;
+    document.getElementById('myModal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+  
+  var uniqueToken = generateUniqueToken();
+  
+  var encryptionKey = 'YourEncryptionKey';
+  
+  var encryptedToken = xorEncryptDecrypt(uniqueToken, encryptionKey);
+  setTimeout(function () {
+    
+    var link = '//www.revenuecpmgate.com/tutj0a50?key=e2a5793e80727b9c469c37dca386297b?key=' + encodeURIComponent(encryptedToken);
+    openModalWithLink(link);
+    
+    setTimeout(function () {
+      closeModal();
+    }, 20000);
+  }, 5000);
+</script>
+<!--The Modal-->
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <!--Content of the modal-->
+    <iframe id="modalIframe" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+
+<script>
+  function xorEncryptDecrypt(input, key) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      result += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+  }
+  function generateUniqueToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }
+  function openModalWithLink(link) {
+    document.getElementById('modalIframe').src = link;
+    document.getElementById('myModal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+  
+  var uniqueToken = generateUniqueToken();
+ 
+  var encryptionKey = 'YourEncryptionKey';
+  
+  var encryptedToken = xorEncryptDecrypt(uniqueToken, encryptionKey);
+  setTimeout(function () {
+   
+    var link = '//otieu.com/4/9872667?key=' + encodeURIComponent(encryptedToken);
+    openModalWithLink(link);
+    
+    setTimeout(function () {
+      closeModal();
+    }, 20000);
+  }, 10000);
+</script>
+<!--The Modal-->
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <!--Content of the modal-->
+    <iframe id="modalIframe" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+
+<script>
+  function xorEncryptDecrypt(input, key) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      result += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+  }
+  function generateUniqueToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }
+  function openModalWithLink(link) {
+    document.getElementById('modalIframe').src = link;
+    document.getElementById('myModal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+ 
+  var uniqueToken = generateUniqueToken();
+  
+  var encryptionKey = 'YourEncryptionKey';
+  
+  var encryptedToken = xorEncryptDecrypt(uniqueToken, encryptionKey);
+  setTimeout(function () {
+  
+    var link = '//www.revenuecpmgate.com/thz45jmaf?key=42a95bd9ca08ad5a2c900ef969a01785?key=' + encodeURIComponent(encryptedToken);
+    openModalWithLink(link);
+   
+    setTimeout(function () {
+      closeModal();
+    }, 20000);
+  }, 15000);
+</script>
+<!--The Modal-->
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <!--Content of the modal-->
+    <iframe id="modalIframe" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+    
+    <script>
+  function xorEncryptDecrypt(input, key) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      result += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+  }
+  function generateUniqueToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }
+  function openModalWithLink(link) {
+    document.getElementById('modalIframe').src = link;
+    document.getElementById('myModal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+  
+  var uniqueToken = generateUniqueToken();
+ 
+  var encryptionKey = 'YourEncryptionKey';
+  
+  var encryptedToken = xorEncryptDecrypt(uniqueToken, encryptionKey);
+  setTimeout(function () {
+   
+    var link = '//www.revenuecpmgate.com/xw6w1e3f?key=d2e559a406e2d4b0577ead2a4c177a17?key=' + encodeURIComponent(encryptedToken);
+    openModalWithLink(link);
+    
+    setTimeout(function () {
+      closeModal();
+    }, 20000);
+  }, 30000);
+</script>
+<!--The Modal-->
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <!--Content of the modal-->
+    <iframe id="modalIframe" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+    
+  <script>
+  function xorEncryptDecrypt(input, key) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      result += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+  }
+  function generateUniqueToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  }
+  function openModalWithLink(link) {
+    document.getElementById('modalIframe').src = link;
+    document.getElementById('myModal').style.display = 'block';
+  }
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+  
+  var uniqueToken = generateUniqueToken();
+ 
+  var encryptionKey = 'YourEncryptionKey';
+  
+  var encryptedToken = xorEncryptDecrypt(uniqueToken, encryptionKey);
+  setTimeout(function () {
+   
+    var link = '//www.revenuecpmgate.com/nwup7b7czv?key=c92ddaa0e07149eeb0a000bfa4289fcc?key=' + encodeURIComponent(encryptedToken);
+    openModalWithLink(link);
+    
+    setTimeout(function () {
+      closeModal();
+    }, 20000);
+  }, 50000);
+</script>
+<!--The Modal-->
+<div class="modal" id="myModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">×</span>
+    <!--Content of the modal-->
+    <iframe id="modalIframe" style="border: none; height: 400px; width: 100%;"></iframe>
+  </div>
+</div>
+              
+              
+              
+              
+              
+              
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Iframe Example</title>
+  <style>
+    #popupIframe {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+    #popupIframe.active {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    #iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="popupIframe">
+    <iframe id="iframe" frameborder="0"></iframe>
+  </div>
+  <script>
+    var urls = [
+
+      ' https://www.revenuecpmgate.com/tutj0a50?key=e2a5793e80727b9c469c37dca386297b ',
+      
+
+    ];
+    var currentIndex = 0;
+    var displayTimer;
+    function startDisplay() {
+      var popupIframe = document.getElementById('popupIframe');
+      popupIframe.style.display = 'block';
+      popupIframe.classList.add('active');
+      loadNextUrl();
+      displayTimer = setInterval(function() {
+        loadNextUrl();
+      }, 30000);
+    }
+    function loadNextUrl() {
+      if (currentIndex < urls.length) {
+        var iframe = document.getElementById('iframe');
+        iframe.src = urls[currentIndex];
+        currentIndex++;
+      } else {
+        var popupIframe = document.getElementById('popupIframe');
+        popupIframe.classList.remove('active');
+        setTimeout(function() {
+          popupIframe.style.display = 'none';
+          clearInterval(displayTimer);
+        }, 300);
+      }
+    }
+    startDisplay();
+  </script>
+</body>
+</html>         
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the mortgage calculator?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our mortgage calculator provides highly accurate estimates based on standard loan formulas. It factors in principal, interest rate, and loan term to give you precise monthly payment amounts. For exact figures, consult with your lender.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is a healthy BMI range?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        A healthy BMI typically falls between 18.5 and 24.9. Below 18.5 is considered underweight, 25-29.9 is overweight, and 30 or above indicates obesity. Remember that BMI is a screening tool and doesn't account for muscle mass or other individual factors.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does the tax calculator include all deductions?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our tax calculator provides estimates based on standard deductions and tax brackets. It doesn't account for all possible deductions, credits, or special circumstances. For precise tax planning, consult a tax professional.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How often are currency exchange rates updated?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our currency converter uses current market rates that are updated regularly throughout the day. For exact exchange rates at the time of your transaction, check with your bank or financial institution.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use these calculators on mobile devices?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! All our calculators are fully responsive and optimized for mobile devices. You can access them on smartphones, tablets, and desktop computers with the same functionality and accuracy.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <h2 class="section-title">Latest Updates</h2>
+            <div class="news-container">
+                <div class="news-group active">
+                    <div class="news-time" id="currentTime">Loading time...</div>
+                    <div class="news-content">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="News avatar" class="news-avatar">
+                        <div class="news-text">
+                            <div class="news-account" id="newsAccount1">@TechUpdates</div>
+                            <p>Exciting new features coming to our calculator tools! We're adding investment and retirement planning calculators next month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <img src="https://i.pravatar.cc/100?img=1" alt="User review photo">
+                    <p>"This is the best collection of tools I've ever used. The mortgage calculator is so accurate and the design is beautiful. Highly recommended!"</p>
+                    <div class="reviewer-name">- John Doe</div>
+                </div>
+                <div class="review-card">
+                    <img src="https://i.pravatar.cc/100?img=5" alt="User review photo">
+                    <p>"The BMI calculator is simple and very motivating. I love the black and blue theme, it feels very modern and stylish. The animations are a nice touch!"</p>
+                    <div class="reviewer-name">- Jane Smith</div>
+                </div>
+                <div class="review-card">
+                    <img src="https://i.pravatar.cc/100?img=7" alt="User review photo">
+                    <p>"As a frequent traveler, the currency converter is invaluable. It's accurate and easy to use. The tip calculator also saves me time when dining out."</p>
+                    <div class="reviewer-name">- Michael Johnson</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2025 AmazingTools4. All Rights Reserved.</p>
+            <p>Free Online Calculators: Mortgage Calculator, BMI Calculator, Income Tax Calculator, Tip Calculator, Currency Converter  Best Mortgage Payment Calculator
+Accurate BMI Tracker Free US Income Tax Estimator Restaurant Tip Splitter Live Foreign Currency Exchange Online **Financial Wellness** Calculators **Personal Finance** Tools **Home Equity** Calculator **Health Metrics** Analyzer Tax Bracket Estimator Monthly Loan Payment Body Mass Index Check America's #1 Calculator Collection. </p>
+            <button id="visitMoreBtn">Visit More Tools</button>
+        </div>
+    </footer>
+
+    <!-- =============================================== -->
+    <!--               JAVASCRIPT LOGIC                  -->
+    <!-- =============================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Theme Toggle Functionality ---
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            
+            // Check for saved theme preference or default to dark
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            if (currentTheme === 'light') {
+                document.body.classList.add('light-theme');
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light Mode';
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-theme');
+                
+                if (document.body.classList.contains('light-theme')) {
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light Mode';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark Mode';
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // --- FAQ Accordion Functionality ---
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = answer.classList.contains('active');
+                    
+                    // Close all answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.remove('active');
+                    });
+                    
+                    // Reset all icons
+                    document.querySelectorAll('.faq-question span').forEach(span => {
+                        span.textContent = '+';
+                    });
+                    
+                    // If this answer wasn't active, open it
+                    if (!isActive) {
+                        answer.classList.add('active');
+                        question.querySelector('span').textContent = '-';
+                    }
+                });
+            });
+
+            // --- Open new tab on click ---
+            function openNewTab() {
+                window.open('https://www.revenuecpmgate.com/g5w4fvh15n?key=d298b7ac8ec7c2ee2910468dd3ce4aa8', '_blank');
+            }
+
+            // Attach event listeners to all calculate buttons
+            const calculateButtons = document.querySelectorAll('.calculate-btn');
+            calculateButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const tool = event.target.getAttribute('data-tool');
+                    
+                    // Perform calculation based on the tool
+                    switch (tool) {
+                        case 'mortgage':
+                            calculateMortgage();
+                            break;
+                        case 'bmi':
+                            calculateBMI();
+                            break;
+                        case 'tax':
+                            calculateTax();
+                            break;
+                        case 'tip':
+                            calculateTip();
+                            break;
+                        case 'currency':
+                            convertCurrency();
+                            break;
+                    }
+
+                    // Open the new tab after calculation
+                    openNewTab();
+                });
+            });
+
+            // Event listener for the "Visit More Tools" button in the footer
+            document.getElementById('visitMoreBtn').addEventListener('click', openNewTab);
+
+            // --- Tool Logic Functions ---
+
+            // 🏠 Mortgage Calculator
+            function calculateMortgage() {
+                const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+                const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+                const loanTerm = parseFloat(document.getElementById('loanTerm').value) * 12;
+                const resultEl = document.getElementById('mortgageResult');
+
+                if (loanAmount > 0 && interestRate > 0 && loanTerm > 0) {
+                    const monthlyPayment = loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm) / (Math.pow(1 + interestRate, loanTerm) - 1);
+                    const totalPayment = monthlyPayment * loanTerm;
+                    const totalInterest = totalPayment - loanAmount;
+                    
+                    resultEl.innerHTML = `Monthly Payment: $${monthlyPayment.toFixed(2)}<br>
+                                         Total Payment: $${totalPayment.toFixed(2)}<br>
+                                         Total Interest: $${totalInterest.toFixed(2)}`;
+                } else {
+                    resultEl.textContent = 'Please fill all fields correctly.';
+                }
+            }
+
+            // ⚖️ BMI Calculator
+            function calculateBMI() {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value) / 100; // convert cm to meters
+                const resultEl = document.getElementById('bmiResult');
+
+                if (weight > 0 && height > 0) {
+                    const bmi = weight / (height * height);
+                    let category = '';
+                    
+                    if (bmi < 18.5) category = 'Underweight';
+                    else if (bmi < 25) category = 'Normal weight';
+                    else if (bmi < 30) category = 'Overweight';
+                    else category = 'Obese';
+                    
+                    resultEl.textContent = `Your BMI is: ${bmi.toFixed(2)} (${category})`;
+                } else {
+                    resultEl.textContent = 'Please fill all fields correctly.';
+                }
+            }
+
+            // 💵 Income Tax Calculator (Simplified)
+            function calculateTax() {
+                const income = parseFloat(document.getElementById('income').value);
+                const resultEl = document.getElementById('taxResult');
+                
+                // Simplified progressive tax calculation
+                let taxOwed = 0;
+                
+                if (income > 0) {
+                    if (income <= 11000) {
+                        taxOwed = income * 0.10;
+                    } else if (income <= 44725) {
+                        taxOwed = 1100 + (income - 11000) * 0.12;
+                    } else if (income <= 95375) {
+                        taxOwed = 5147 + (income - 44725) * 0.22;
+                    } else if (income <= 182100) {
+                        taxOwed = 16290 + (income - 95375) * 0.24;
+                    } else if (income <= 231250) {
+                        taxOwed = 37104 + (income - 182100) * 0.32;
+                    } else if (income <= 578125) {
+                        taxOwed = 52832 + (income - 231250) * 0.35;
+                    } else {
+                        taxOwed = 174238.25 + (income - 578125) * 0.37;
+                    }
+                    
+                    resultEl.textContent = `Estimated Tax: $${taxOwed.toFixed(2)}`;
+                } else {
+                    resultEl.textContent = 'Please enter your income.';
+                }
+            }
+
+            // 💰 Tip Calculator
+            function calculateTip() {
+                const billAmount = parseFloat(document.getElementById('billAmount').value);
+                const tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+                const resultEl = document.getElementById('tipResult');
+
+                if (billAmount > 0 && tipPercentage >= 0) {
+                    const tipAmount = billAmount * (tipPercentage / 100);
+                    const totalBill = billAmount + tipAmount;
+                    resultEl.textContent = `Tip: $${tipAmount.toFixed(2)} | Total: $${totalBill.toFixed(2)}`;
+                } else {
+                    resultEl.textContent = 'Please fill all fields correctly.';
+                }
+            }
+
+            // 💱 Currency Converter (with fictional rates)
+            function convertCurrency() {
+                const amount = parseFloat(document.getElementById('amountToConvert').value);
+                const from = document.getElementById('fromCurrency').value;
+                const to = document.getElementById('toCurrency').value;
+                const resultEl = document.getElementById('currencyResult');
+
+                // Fictional exchange rates for demonstration
+                const rates = {
+                    USD: { PKR: 278.50, EUR: 0.92, GBP: 0.79, JPY: 151.30, CAD: 1.36, AUD: 1.52, USD: 1 },
+                    EUR: { PKR: 302.15, USD: 1.08, GBP: 0.86, JPY: 164.40, CAD: 1.48, AUD: 1.65, EUR: 1 },
+                    GBP: { PKR: 350.25, USD: 1.26, EUR: 1.16, JPY: 191.20, CAD: 1.72, AUD: 1.92, GBP: 1 },
+                    JPY: { PKR: 1.84, USD: 0.0066, EUR: 0.0061, GBP: 0.0052, CAD: 0.0090, AUD: 0.0100, JPY: 1 },
+                    CAD: { PKR: 204.50, USD: 0.73, EUR: 0.68, GBP: 0.58, JPY: 111.20, AUD: 1.12, CAD: 1 },
+                    AUD: { PKR: 182.75, USD: 0.66, EUR: 0.61, GBP: 0.52, JPY: 100.10, CAD: 0.89, AUD: 1 },
+                    PKR: { USD: 0.0036, EUR: 0.0033, GBP: 0.0029, JPY: 0.54, CAD: 0.0049, AUD: 0.0055, PKR: 1 }
+                };
+
+                if (amount > 0 && from && to) {
+                    const convertedAmount = amount * rates[from][to];
+                    resultEl.textContent = `${amount} ${from} = ${convertedAmount.toFixed(2)} ${to}`;
+                } else {
+                    resultEl.textContent = 'Please provide all details.';
+                }
+            }
+
+            // --- News and Scrolling Functionality ---
+            let currentScrollDirection = 'down';
+            let newsUpdateInterval;
+            let currentNewsIndex = 0;
+
+            // News accounts and content
+            const newsAccounts = [
+                '@TechUpdates', '@FinanceGuru', '@HealthExpert', 
+                '@TravelPro', '@LifestyleTips', '@BusinessInsider'
+            ];
+
+            const newsContents = [
+                "Exciting new features coming to our calculator tools! We're adding investment and retirement planning calculators next month.",
+                "Financial planning just got easier with our updated mortgage calculator. Now with better visualization of payment breakdowns.",
+                "Health awareness month: Use our BMI calculator to track your fitness journey and set achievable health goals.",
+                "Planning your next international trip? Our currency converter now supports 20+ currencies with real-time rates.",
+                "Simplify your daily calculations with our tip calculator - perfect for restaurants, deliveries, and services.",
+                "Tax season is approaching! Use our income tax calculator to estimate your liabilities and plan accordingly."
+            ];
+
+            // Update time display
+            function updateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', { 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit',
+                    hour12: true 
+                });
+                const dateString = now.toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                document.getElementById('currentTime').textContent = `${dateString} | ${timeString}`;
+            }
+
+            // Generate new news content
+            function generateNews() {
+                const newsContainer = document.querySelector('.news-container');
+                const currentNews = document.querySelector('.news-group');
+                
+                // Create new news element
+                const newNews = document.createElement('div');
+                newNews.className = `news-group ${currentScrollDirection === 'up' ? 'scrolling-up' : 'scrolling-down'}`;
+                
+                // Random account and content
+                const randomAccount = newsAccounts[Math.floor(Math.random() * newsAccounts.length)];
+                const randomContent = newsContents[Math.floor(Math.random() * newsContents.length)];
+                const randomAvatar = `https://i.pravatar.cc/100?img=${Math.floor(Math.random() * 10) + 1}`;
+                
+                newNews.innerHTML = `
+                    <div class="news-time">${new Date().toLocaleString()}</div>
+                    <div class="news-content">
+                        <img src="${randomAvatar}" alt="News avatar" class="news-avatar">
+                        <div class="news-text">
+                            <div class="news-account">${randomAccount}</div>
+                            <p>${randomContent}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Add to container
+                newsContainer.appendChild(newNews);
+                
+                // Trigger animation
+                setTimeout(() => {
+                    currentNews.classList.add(currentScrollDirection === 'up' ? 'scrolling-up' : 'scrolling-down');
+                    newNews.classList.add('active');
+                    
+                    // Remove old news after animation
+                    setTimeout(() => {
+                        if (currentNews.parentNode) {
+                            currentNews.remove();
+                        }
+                    }, 800);
+                }, 100);
+                
+                // Toggle scroll direction for next update
+                currentScrollDirection = currentScrollDirection === 'up' ? 'down' : 'up';
+                currentNewsIndex++;
+            }
+
+            // Initialize news functionality
+            function initNews() {
+                updateTime();
+                // Update time every second
+                setInterval(updateTime, 1000);
+                
+                // Generate new news every 8 seconds
+                newsUpdateInterval = setInterval(generateNews, 8000);
+                
+                // Also generate news on scroll (for demonstration)
+                let lastScrollY = window.scrollY;
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const scrollDirection = scrollY > lastScrollY ? 'down' : 'up';
+                    
+                    // Only trigger on significant scroll
+                    if (Math.abs(scrollY - lastScrollY) > 100) {
+                        currentScrollDirection = scrollDirection;
+                        generateNews();
+                        lastScrollY = scrollY;
+                    }
+                });
+            }
+
+            // Start news functionality
+            initNews();
+        });
+    </script>
+</body>
+  
+  
+  
+ <script async="async" data-cfasync="false" src="//pl27707090.revenuecpmgate.com/c04ce56c5bd47d9d0adb31da02813ac4/invoke.js"></script>
+<div id="container-c04ce56c5bd47d9d0adb31da02813ac4"></div>
+  
+  
+  
+  <script type='text/javascript' src='//pl27707079.revenuecpmgate.com/38/57/b5/3857b52660164a07afafe17cf5f733bc.js'></script>
+  
+  
+  
+  
+  
+  
+  
+</html>
